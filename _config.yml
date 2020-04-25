@@ -17,10 +17,13 @@ title: Ciencia de datos y Estadistica
 email: jeromero@unal.edu.co
 description: >- # this means to ignore newlines until "baseurl:"
   Portafolio de trabajo.
-linkedin_username: jeromero
 github_username: 4jeromero
 minimal_mistakes_skin: mint
 search: true
+url: ""
+
+teaser: /assets/images/dv.png
+
 
 # Build settings
 markdown: kramdown
@@ -30,6 +33,8 @@ permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+
 
 include:
   - _pages
@@ -68,7 +73,7 @@ author:
       url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/4jeromero"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/"
@@ -80,7 +85,7 @@ footer:
       url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/4jeromero"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/"
@@ -91,10 +96,9 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
       author_profile: true
       read_time: true
-      comments: #true
+      comments: true
       share: true
       related: true
   # _pages
@@ -104,6 +108,15 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true
+
 
 category_archive:
   type: liquid
@@ -111,3 +124,11 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+site.locale:
+ locale: "es-CO"
+ 
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
